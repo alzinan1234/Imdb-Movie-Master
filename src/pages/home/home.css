@@ -1,53 +1,96 @@
-.posterImage {
-  height: 600px;
-}
-
-.posterImage > img {
-  margin: auto;
-  display: block;
-  width: 100%;
-}
-
-.posterImage__overlay {
-  position: absolute;
-  padding: 5rem;
-  bottom: 0px;
-  height: 70%;
+/* General poster container styles */
+.poster {
+  margin: 20px;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  justify-content: flex-end;
-  align-items: flex-start;
-  background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
-  opacity: 1;
-  transition: opacity 0.3s;
+  align-items: center;
+  justify-content: center;
 }
 
-.posterImage__overlay:hover {
-  opacity: 1;
+/* Carousel image styles */
+.posterImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Overlay on the carousel image */
+.posterImage__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
 }
 
 .posterImage__title {
-  font-weight: 900;
-  font-size: 4rem;
-  margin-bottom: 0.4rem;
-  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .posterImage__runtime {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.posterImage__rating {
-  margin-left: 3rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
 }
 
 .posterImage__description {
-  font-style: italic;
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
-  display: flex;
-  text-align: left;
-  width: 50%;
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+/* Responsive adjustments for different devices */
+@media (max-width: 1024px) {
+  .posterImage__title {
+    font-size: 1.2rem;
+  }
+
+  .posterImage__runtime {
+    font-size: 0.8rem;
+  }
+
+  .posterImage__description {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .poster {
+    margin: 10px;
+  }
+
+  .posterImage__title {
+    font-size: 1rem;
+  }
+
+  .posterImage__runtime {
+    font-size: 0.7rem;
+  }
+
+  .posterImage__description {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .poster {
+    margin: 5px;
+  }
+
+  .posterImage__title {
+    font-size: 0.9rem;
+  }
+
+  .posterImage__runtime {
+    font-size: 0.6rem;
+  }
+
+  .posterImage__description {
+    font-size: 0.5rem;
+  }
 }
